@@ -7,7 +7,7 @@
 
 subooatmpl is a template library for CodeIgniter 2.0, which allows you to quickly build and organise your CI site using a template system.
 
-As a side note, it also works perfectly with HMVC by wiredesignz https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc
+As a side note, it also works perfectly with [https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc](HMVC by wiredesignz)
 
 ##Development by
 
@@ -28,23 +28,21 @@ Update the config/subooatmpl.php file to set your base template settings such as
 
 An example of updating the base welcome controller in CI to use this library is below:
 
-<code>
-class Welcome extends CI_Controller {
-
-	function __construct(){
-		parent::__construct();
-	}
-
-	function index() {
-		$data = array('some_variable' => 'some_data')
+	class Welcome extends CI_Controller {
+	
+		function __construct(){
+			parent::__construct();
+		}
+	
+		function index() {
+			$data = array('some_variable' => 'some_data')
 		
-		$this->subooatmpl->add_message('notice', 'You are using the subooatmpl library');
+			$this->subooatmpl->add_message('notice', 'You are using the subooatmpl library');
 		
-		$this->subooatmpl->set_content('welcome_message', $data);
-		$this->subooatmpl->build();
+			$this->subooatmpl->set_content('welcome_message', $data);
+			$this->subooatmpl->build();
+		}
 	}
-}
-</code>
 
 ##Available methods
 
