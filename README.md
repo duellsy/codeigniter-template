@@ -11,7 +11,7 @@ subooatmpl is a templating library for CodeIgniter 2.0, which allows you to quic
 ##Development by
 
 * Chris Duell - Lead Developer ([http://duellsy.com](http://duellsy.com))
-* With thanks to Matt Trimarchi - ([http://studio372.com.au]http://studio372.com]), worked on V1.0 together.
+* With thanks to Matt Trimarchi - ([http://studio372.com.au](http://studio372.com), worked on V1.0 together.
 
 ##Requirements
 
@@ -30,13 +30,11 @@ An example of updating the base welcome controller in CI to use this library is 
 <code>
 class Welcome extends CI_Controller {
 
-####function __construct()
-	{
+	function __construct(){
 		parent::__construct();
 	}
 
-####function index()
-	{
+	function index() {
 		$data = array('some_variable' => 'some_data')
 		
 		$this->subooatmpl->add_message('notice', 'You are using the subooatmpl library');
