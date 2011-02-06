@@ -7,7 +7,7 @@
 
 subooatmpl is a template library for CodeIgniter 2.0, which allows you to quickly build and organise your CI site using a template system.
 
-As a side note, it also works perfectly with [https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc](HMVC by wiredesignz)
+As a side note, it also works perfectly with [HMVC by wiredesignz](https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc)
 
 ##Development by
 
