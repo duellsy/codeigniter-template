@@ -61,7 +61,7 @@ class Template
 	 */
 	private function _load_config_file()
 	{
-		if ( ! @include(APPPATH.'config/subooatmpl'.EXT))
+		if ( ! @include(APPPATH.'config/template'.EXT))
 		{
 			return FALSE;
 		}
