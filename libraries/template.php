@@ -7,7 +7,7 @@
  * @license GPL
  *
  */
-class Subooatmpl
+class Template
 {
 	var $CI;
 
