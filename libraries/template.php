@@ -29,7 +29,8 @@ class Template
 			$this->_load_config_file();
 		}
 		
-		$this->data['user'] = $this->CI->quickauth->user();		
+		// add in anything you want all pages to have access to to the data array
+		// $this->data['user'] = $this->CI->quickauth->user();		
 
 			
 	}
