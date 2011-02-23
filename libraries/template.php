@@ -139,7 +139,9 @@ class Template
 		
 		if($load){
 			
-			$this->css_load .= '<link href="'.$this->CI->config->item('base_url') . $this->data['assets_dir'] . 'css/' . $css . '.css" media="screen" rel="stylesheet" type="text/css" />';
+			$this->css_load .= '<link href="'.$this->CI->config->item('base_url') . $this->data['assets_dir'] . 'css/' . $css . '.css?'
+				.filemtime($this->data['assets_dir'] . 'css/' . $css . '.css')
+				.'" media="screen" rel="stylesheet" type="text/css" />';
 		
 		} else {
 
@@ -174,7 +176,9 @@ class Template
 		
 		if($load){
 		
-			$this->js_load .= '<script src="'.$this->CI->config->item('base_url') . $this->data['assets_dir'] . 'js/' . $js . '.js" type="text/javascript"></script>';
+			$this->js_load .= '<script src="'.$this->CI->config->item('base_url') . $this->data['assets_dir'] . 'js/' . $js . '.js?'
+				.filemtime($this->data['assets_dir'] . 'js/' . $js . '.js')
+				.'" type="text/javascript"></script>';
 
 		} else {
 		
