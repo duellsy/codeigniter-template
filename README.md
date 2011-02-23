@@ -1,11 +1,11 @@
-#subooatmpl
+#CodeIgniter Template LIbrary
 
 * [By Subooa](http://www.subooa.com.au/)
 * Version: 2.0
 
 ## Description
 
-subooatmpl is a template library for CodeIgniter 2.0, which allows you to quickly build and organise your CI site using a template system.
+A template library for CodeIgniter 2.0, which allows you to quickly build and organise your CI site using a template system.
 
 As a side note, it also works perfectly with [HMVC by wiredesignz](https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc)
 
@@ -22,7 +22,7 @@ Code Igniter 2.0
 
 Download and place the files in your CI installation.
 
-Add subooatmpl to your autoload file in the libraries config item.
+Add 'template' to your autoload file in the libraries config item.
 
 Update the config/subooatmpl.php file to set your base template settings such as the sites name, title, and other items like which css and js files are always loaded.
 
