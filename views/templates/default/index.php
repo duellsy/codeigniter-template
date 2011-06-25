@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title><?=$site_title?> - <?=$site_name?></title>
-	<?=$head?>
-	<?=$css?>
-	<?=$js?>
+	<title><?php echo site_title ?> - <?php echo $site_name ?></title>
+	<?php echo $head ?>
+	<?php echo css ?>
+	<?php echo js ?>
 </head>
 
 <body>
@@ -13,14 +13,14 @@
 	<div class="wrap">
 
 		<div class="header">
-			<h1><?=$site_name?></h1>
+			<h1><?=$site_name ?></h1>
 			
 		</div>
 	
 		
 		<div class="main">
-			<?=$messages?>
-			<?=$content?>
+			<?php echo messages ?>
+			<?php echo $content ?>
 		</div>
 		
 	
