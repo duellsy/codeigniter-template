@@ -71,7 +71,7 @@ class Template
 		{
 			$this->data[$citem] = $cval;
 		}
-		unset($tempalte_conf);
+		unset($template_conf);
 		
 		
 		// display the profiler if in dev mode
@@ -84,21 +84,21 @@ class Template
 		{
 			$this->add_css($css);
 		}
-		unset($tempalte_css);
+		unset($template_css);
 
 
 		foreach($template_js as $js)
 		{
 			$this->add_js($js);
 		}
-		unset($tempalte_js);
+		unset($template_js);
 
 
 		foreach($template_head as $head)
 		{
 			$this->add_head($head);
 		}
-		unset($tempalte_head);
+		unset($template_head);
 
 		return true;
 	}
