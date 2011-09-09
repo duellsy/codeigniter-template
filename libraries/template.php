@@ -15,6 +15,7 @@ class Template
 	var $css_load = '';
 	var $js_raw = '';
 	var $js_load = '';
+	var $http_headers = array();
 	var $messages = array('success' => array(), 'notice' => array(), 'warning' => array());
 	
 
@@ -31,7 +32,9 @@ class Template
 		
 		// add in anything you want all pages to have access to to the data array
 		// $this->data['user'] = $this->CI->quickauth->user();		
-
+		
+		// if you need to use things like money_format where the locale is needed
+		// setlocale(LC_ALL, 'en_US.utf-8');
 			
 	}
 
@@ -209,6 +212,34 @@ class Template
 		$this->data['head'] .= $head;
 		
 	}
+
+
+	/**
+	 * Add http header to output stack
+	 *
+	 */
+	function add_http_header($header){
+
+		$this->http_headers[] = $header;
+
+	}
+
+	/**
+	 *  Sequentially load http headers from output stack
+	 */
+	function build_http_header() {
+
+		// Add some default headers, no point in adding to config!
+		$this->http_headers[] = "Pragma: no-cache";
+		$this->http_headers[] = "Expires: Sat, 01 Jan 2000 00:00:00 GMT";
+		$this->http_headers[] = "Cache-Control: private, no-cache, no-store, must-revalidate";
+
+		foreach($this->http_headers as $h) {
+			$this->CI->output->set_header($h);
+		}
+
+	}
+
 	
 	
 	/**
@@ -298,7 +329,8 @@ class Template
 	
 		$this->prepare_jcss();
 		$this->prepare_messages();
-	
+		$this->build_http_header();
+		
 		$this->CI->load->view('templates/'.$this->data['template'].'/index.php', $this->data);
 		
 	}

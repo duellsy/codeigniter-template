@@ -9,10 +9,18 @@ A template library for CodeIgniter 2.0, which allows you to quickly build and or
 
 As a side note, it also works perfectly with [HMVC by wiredesignz](https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc)
 
+Resolves an issue with IE caching page elements. Thanks to Steve from [Innexio](http://www.innexio.com.au) for the fix
+
+
 ##Development by
 
 * Chris Duell - Lead Developer ([http://duellsy.com](http://duellsy.com))
 * With thanks to Matt Trimarchi - ([http://studio372.com.au](http://studio372.com), worked on V1.0 together.
+
+###Contributors
+
+* [robbiek](https://github.com/robbiek)
+* Steve from [Innexio](http://www.innexio.com.au)
 
 ##Requirements
 
