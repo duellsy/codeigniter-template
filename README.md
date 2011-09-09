@@ -29,13 +29,15 @@ Code Igniter 2.0
 
 ##Usage
 
-Download and place the files in your CI installation.
+Download and place the files in your CI installation, following the same folder structure. Add the assets folder to your root, this is where you'll put your images / css / js files.
 
-Add 'template' to your autoload file in the libraries config item.
+Add 'template' to your autoload file in the libraries config item. 
 
-Update the config/subooatmpl.php file to set your base template settings such as the sites name, title, and other items like which css and js files are always loaded.
+Make sure that you are also autoloading the session library, and that you have set an encryption key in your app/config/config.php file.
 
-An example of updating the base welcome controller in CI to use this library is below:
+Update the config/template.php file to set your base template settings such as the sites name, title, and other items like which css and js files are always loaded.
+
+A quick example to get you going is to update the default welcome controller in CI to use this library:
 
 	class Welcome extends CI_Controller {
 	
@@ -44,11 +46,12 @@ An example of updating the base welcome controller in CI to use this library is 
 		}
 	
 		function index() {
-			$data = array('some_variable' => 'some_data')
+			$data = array('some_variable' => 'some_data');
 		
-			$this->template->add_message('info', 'You are using duellsys template library');
+			$this->template->add_message('success', 'You are using duellsys template library');
+			$this->template->add_message('info', 'Awesome!');
 		
-			$this->template->set_content('welcome_message', $data);
+			$this->template->set_content('example', $data);
 			$this->template->build();
 		}
 	}

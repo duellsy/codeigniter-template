@@ -22,6 +22,6 @@ $template_head = array(
 	'jquery' => '<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 					<script type="text/javascript">
 					google.load("jquery", "1.6.0");
-					</script>'
+					</script>',
 	'bootstrap' => '<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.2.0.min.css">'
 );

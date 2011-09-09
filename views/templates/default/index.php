@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title><?php echo $site_title?> - <?php echo $site_name?></title>
-	<?php echo head?>
-	<?php echo css?>
-	<?php echo js?>
+	<?php echo $head?>
+	<?php echo $css?>
+	<?php echo $js?>
 </head>
 
 <body>
@@ -30,8 +30,8 @@
 		<div class="container">
 		
 			<div class="main">
-				<?php echo messages?>
-				<?php echo content?>
+				<?php echo $messages?>
+				<?php echo $content?>
 			</div>
 			
 		</div>
