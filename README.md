@@ -46,10 +46,10 @@ An example of updating the base welcome controller in CI to use this library is 
 		function index() {
 			$data = array('some_variable' => 'some_data')
 		
-			$this->subooatmpl->add_message('notice', 'You are using the subooatmpl library');
+			$this->template->add_message('info', 'You are using duellsys template library');
 		
-			$this->subooatmpl->set_content('welcome_message', $data);
-			$this->subooatmpl->build();
+			$this->template->set_content('welcome_message', $data);
+			$this->template->build();
 		}
 	}
 
@@ -85,7 +85,7 @@ Add tag to head
 
 ####function add_message($type, $message)
 Adds a message to the current page stack
-Available types are success, notice and warning
+Available types are warning, error, success and info
 
 ####function set_flashdata($type, $message)
 Serves purely as a wrapper for the CI flashdata
@@ -93,7 +93,7 @@ Just to keep syntax organised
 
 ####function prepare_messages()
 Formats the messages added to the stack, 
-and any success, notice or warning messages 
+and any warning, error, success and info messages 
 that were added via session->flashdata
 
 ####function build()
