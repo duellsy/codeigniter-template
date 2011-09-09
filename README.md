@@ -1,16 +1,17 @@
 #CodeIgniter Template LIbrary
 
 * [By Subooa](http://www.subooa.com.au/)
-* Version: 2.0
+* Version: 2.1
 
 ## Description
 
 A template library for CodeIgniter 2.0, which allows you to quickly build and organise your CI site using a template system.
 
-As a side note, it also works perfectly with [HMVC by wiredesignz](https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc)
+The base template view is formatted to make use of the [Twitter Bootstrap CSS](http://twitter.github.com/bootstrap/) to get you up and running with a neat looking app, fast.
 
 Resolves an issue with IE caching page elements. Thanks to Steve from [Innexio](http://www.innexio.com.au) for the fix
 
+As a side note, it also works perfectly with [HMVC by wiredesignz](https://bitbucket.org/wiredesignz/codeigniter-modular-extensions-hmvc)
 
 ##Development by
 

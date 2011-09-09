@@ -1,9 +1,9 @@
 <?php
 /**
- * @name subootmpl
+ * @name Codeigniter-Template
  * @author Chris Duell
  * @author_url http://www.subooa.com.au
- * @version 2.0
+ * @version 2.1
  * @license GPL
  *
  */
@@ -16,9 +16,14 @@ class Template
 	var $js_raw = '';
 	var $js_load = '';
 	var $http_headers = array();
-	var $messages = array('success' => array(), 'notice' => array(), 'warning' => array());
+	var $messages = array(
+		'warning' => array(), 
+		'error' => array(), 
+		'success' => array(), 
+		'info' => array()
+	);
 	
-
+	
 	public function __construct($config = array())
 	{
 			
@@ -244,7 +249,7 @@ class Template
 	
 	/**
 	 * Adds a message to the current page stack
-	 * Available types are success, notice and warning
+	 * Available types are warning, error, success and info
 	 */
 	function add_message($type, $message){
 	
@@ -266,7 +271,7 @@ class Template
 	
 	/**
 	 * Formats the messages added to the stack, 
-	 * and any success, notice or warning messages 
+	 * and any warning, error, success and info messages 
 	 * that were added via session->flashdata
 	 */
 	function prepare_messages(){
@@ -281,13 +286,13 @@ class Template
 			
 			// if there's messages of this type, prepare for printing
 			if(sizeof($messages)){
-				$this->data['messages'] .= '<ul class="messages '.$type.'">';
+				$this->data['messages'] .= '<div class="alert-message '.$type.'">';
 			
 				foreach($messages as $message){
-					$this->data['messages'] .= '<li>'.$message.'</li>';
+					$this->data['messages'] .= '<p>'.$message.'</p>';
 				}
 			
-				$this->data['messages'] .= '</ul>';
+				$this->data['messages'] .= '</div>';
 			}
 			
 		}

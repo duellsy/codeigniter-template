@@ -10,27 +10,44 @@
 
 <body>
 
-	<div class="wrap">
+	<section id="header">
 
-		<div class="header">
-			<h1><?php echo $site_name?></h1>
+		<div class="container">
+	
+			<div class="page-header">
+		
+				<h1><?php echo $site_name?></h1>
+	
+			</div>	
+	
+		</div>
+	
+	</section>
+
+
+	<section id="main">
+
+		<div class="container">
+		
+			<div class="main">
+				<?php echo messages?>
+				<?php echo content?>
+			</div>
 			
 		</div>
-	
-		
-		<div class="main">
-			<?php echo messages?>
-			<?php echo content?>
-		</div>
-		
-	
-		<div class="footer">
+
+	</section>
+
+
+	<section id="footer">
+
+		<div class="container">
 		
 			<p><br />Page rendered in {elapsed_time} seconds</p>
 	
 		</div>
 		
-	</div>
+	</section>
 
 </body>
 </html>
