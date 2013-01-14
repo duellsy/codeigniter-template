@@ -1,6 +1,6 @@
 #CodeIgniter Template LIbrary
 
-* [By Subooa](http://www.subooa.com.au/)
+* [By Chris Duell](http://www.chrisduell.com/)
 * Version: 2.1
 
 ## Description
